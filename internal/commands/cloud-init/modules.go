@@ -23,5 +23,7 @@ func CmdModules() *cobra.Command {
 		Use: "modules",
 	}
 
+	cmd.Flags().String("mode", "", "Mode")
+
 	return cmd
 }

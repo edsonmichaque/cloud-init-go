@@ -23,5 +23,9 @@ func CmdSingle() *cobra.Command {
 		Use: "single",
 	}
 
+	cmd.Flags().String("name", "", "Name")
+	cmd.Flags().String("frequency", "", "Frequency")
+	cmd.Flags().Bool("Report", false, "Enable report")
+
 	return cmd
 }

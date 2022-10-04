@@ -23,5 +23,10 @@ func CmdSchema() *cobra.Command {
 		Use: "schema",
 	}
 
+	cmd.Flags().StringP("config-file", "c", "", "Configuration file")
+	cmd.Flags().Bool("system", false, "System")
+	cmd.Flags().Bool("annotate", false, "Annotate")
+	cmd.Flags().StringArrayP("docs", "d", nil, "Docs")
+
 	return cmd
 }

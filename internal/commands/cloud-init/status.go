@@ -23,5 +23,9 @@ func CmdStatus() *cobra.Command {
 		Use: "status",
 	}
 
+	cmd.Flags().Bool("wait", false, "Wait")
+	cmd.Flags().Bool("long", false, "Long")
+	cmd.Flags().String("format", "", "Format")
+
 	return cmd
 }

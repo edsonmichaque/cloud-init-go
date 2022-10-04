@@ -18,14 +18,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func CmdClean() *cobra.Command {
+func CmdAnalizeBoot() *cobra.Command {
 	cmd := &cobra.Command{
-		Use: "clean",
+		Use: "boot",
 	}
-
-	cmd.Flags().Bool("logs", false, "Logs")
-	cmd.Flags().Bool("reboot", false, "Reboot")
-	cmd.Flags().Bool("machine-id", false, "Machine id")
 
 	return cmd
 }

@@ -20,8 +20,14 @@ import (
 
 func CmdQuery() *cobra.Command {
 	cmd := &cobra.Command{
-		Use: "query",
+		Use:  "query",
+		Args: cobra.ExactArgs(1),
 	}
+
+	cmd.Flags().Bool("all", false, "All")
+	cmd.Flags().Bool("instance-data", false, "Instance data")
+	cmd.Flags().Bool("list-keys", false, "List keys")
+	cmd.Flags().Bool("format", false, "Format")
 
 	return cmd
 }
